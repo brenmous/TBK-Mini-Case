@@ -1,80 +1,29 @@
 # TBK Mini
 
-A Dactyl Manuform Mini. Silent and compact, with per-key RGB.
+Fork of https://github.com/bastardkb/tbk-mini.
 
-![](pics/4.png)
-![](pics/5.JPG)
+Trying to modify the case to accommodate this [little fucker](https://www.adafruit.com/product/3870)
+as a battery cutoff for my [ZMK TBK Mini](https://github.com/brenmous/tbk-mini-zmk).
 
-# Sourcing the components
+My 3D printer is in the mail but I'm so excited/upset with my retrofitting
+efforts that I'm working on this now.
 
-## Electronic components
+## How do?
 
-You will need to order the parts from a shop, and order some PCBs directly from the manufacturer.
+There's .stl files and an .f3d file for the orignal design.
 
-Parts list:
+I had installed OpenSCAD and imported the STL before the Fusion360
+snap finished installing (which probably would've been a hassle to
+get running anyway), so I'm going with OpenSCAD.
 
-| Part name                         | Amount | Link                                                                                       |
-| --------------------------------- | ------ | ------------------------------------------------------------------------------------------ |
-| Flexible PCB for the plate        | 2      | https://github.com/Bastardkb/TBK-Mini-PCB-plate                                            |
-| Flexible PCB for the thumbs       | 2      | https://github.com/Bastardkb/TBK-Mini-PCB-thumb-cluster                                    |
-| Elite-C                           | 2      |                                                                                            |
-| Elite-C adapter PCB V1.4          | 2      | https://github.com/Bastardkb/Elite-C-holder                                                |
-| SOD123 Diodes                     | 42     |                                                                                            |
-| Ribbon cables Flexstrip           | 34     | Farnell, Aliexpress                                                                        |
-| M4 8mm Torx Screw                 | 14     | Conrad                                                                                     |
-| M4 screw insert, M4 X D6.0 X L5.0 | 14     | https://fr.aliexpress.com/item/4000232925592.html?spm=a2g0s.12269583.0.0.6aef4f282LZO4v    |
-| Audio jack, SMD                   | 2      |                                                                                            |
-| Button, 4x4x1.5                   | 2      | https://www.aliexpress.com/item/1005001304569553.html?spm=a2g0s.9042311.0.0.27424c4dDwgcp7 |
+This is my first time doing any 3D modelling or CAD.
 
-If you want RGB, you will also need:
+My approach is to recreate the button and position it in place
+so the part the button extrudes from is flush with the outside of
+the case.
 
-| Part name               | Amount | Format                                |
-| ----------------------- | ------ | ------------------------------------- |
-| SK6812 Mini-E LEDs      | 42     |                                       |
-| Capacitor, 1uF          | 4      | 1206                                  |
-| Resistor, 330Ohms       | 4      | 1206                                  |
-| Wires                   |        | 28 AWG recommended, Black, Red, Color |
-| Ribbon cables Flexstrip | 6      |                                       |
-
-## Print the case
-
-The STL, STEP and Fusion files are included in this Github.
-Feel free to modify them at length. The files are on a non-commercial license, so this is for personal projects only - please do not use those to sell them.
-
-Please find detailed instructions on how to print the case here:
-https://docs.bastardkb.com/hc/en-us/articles/360020031180-Print-settings-for-Dactyls
-
-## Get a kit from BastardKB
-
-You can also get a full Kit, including case and all PCBs and electronics required on the shop:
-https://bastardkb.com/
-
-
-If you want to print the case yourself, you can also get just the electronics Kit.
-
-# Build guide
-
-Please find detailed build instructions here:
-https://docs.bastardkb.com/hc/en-us/articles/4415744748306-Kit-contents-and-required-tools
-
-# Finding help
-
-- Discord: https://bastardkb.com/discord
-- Website: https://bastardkb.com/
-- Docs: https://docs.bastardkb.com
-
-
-# Forks
-
-- [With loligagger holder for nice!nanos](https://github.com/nathanielks/TBK-Mini) - reset switch and power switch
-
-# Support me on Patreon
-
-If you like the keyboard, please consider helping me with Patreon: https://www.patreon.com/bastardkb
-
-I post regular updates and hindsight on my work. I work full time on keyboard innovation, and this helps a lot !
-
-
-# License
-
-This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+The button shape isn't quite right. The body is a rectangle with about
+a third of a cylinder for each end. I haven't worked out how to best do
+that, so I've made the base of it slightly larger to allow the button
+to fit. It won't be snug but it's getting epoxy'd in and the hole for
+the button will align it.
