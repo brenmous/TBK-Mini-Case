@@ -5,7 +5,7 @@ module base() {
     translate([-96, -9, -5.8]) {
         rotate([90, 14.3, 0]) {
             // +.5 400mah battery dimensions
-            battery_shelf(25, 38, 6, 0.3);
+            battery_holder(25, 38, 6, 0.3);
         }
     }
 }

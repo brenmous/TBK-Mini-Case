@@ -12,7 +12,21 @@ module button() {
     }
 }
 
-module battery_shelf(
+module battery_restraint(width, length) {
+    rotate([-90, 0, 0]) {
+        translate([0, 0, 0]) {
+                cylinder($fn=24, r=1, h=width);
+            }
+        hull() {
+            cube([1, 1, width]);
+            translate([length, -1, width / 4]) {
+                cylinder($fn=24, r=0.5, h=width / 2);
+            }
+        }
+    }
+}
+
+module battery_holder(
     width, length, height, cut_ratio
 ) {
     outer_width = width + 2;
@@ -33,4 +47,15 @@ module battery_shelf(
             color("green") {cube([outer_width * cut_ratio, 1, height-1]);}
         }
     }
+
+    rwidth = outer_length / 5;
+    rlength = width;
+    translate([-1, outer_length / 4 - rwidth / 2, -6])
+    battery_restraint(rwidth, rlength);
+    translate([outer_width - 1, (outer_length / 4 - rwidth / 2) * 4, -6])
+    mirror([1, 0, 0])
+    battery_restraint(rwidth, rlength);
+    
 }
+
+battery_holder(25, 38, 6, 0.3);
